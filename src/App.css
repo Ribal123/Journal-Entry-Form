@@ -1,0 +1,272 @@
+/* ================================
+   Global Styles
+================================== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  /* background-color: #000000dd; */
+}
+
+/* ================================
+   Background Video Styling
+================================== */
+.app-background {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ================================
+   App Container
+================================== */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+/* ================================
+   Glassmorphism Box
+================================== */
+.glass-box {
+  width: 100%;
+  max-width: 800px;
+  padding: 24px 32px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white !important;
+  box-sizing: border-box;
+}
+
+/* ================================
+   Titles & Sections
+================================== */
+.app-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* ================================
+   Form Input Groups
+================================== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 120px;
+}
+
+.input-group label {
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  border: none;
+    background-color: rgb(255 255 255 / 21%);
+    color: #000000d1;
+}
+
+/* ================================
+   Table Styling
+================================== */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  text-align: left;
+  color: white;
+}
+
+.data-table th {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.data-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.total-row td {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ================================
+   Search Input with Suggestions
+================================== */
+.input-cell {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-input:disabled {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #999;
+}
+
+.suggestion-list {
+  position: absolute;
+  width: 100%;
+  max-height: 120px;
+  margin-top: 4px;
+  overflow-y: auto;
+  z-index: 10;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.suggestion-list li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion-list li:hover {
+  background-color: #eee;
+}
+
+/* ================================
+   Form Validation Message
+================================== */
+.invalid-msg {
+  font-size: 12px;
+  color: red;
+  margin-top: 4px;
+}
+
+/* ================================
+   Buttons
+================================== */
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.reset-btn,
+.post-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reset-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #ff1a1a;
+}
+
+.post-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.post-btn:hover {
+  background-color: #45a049;
+}
+
+/* ================================
+   Summary Card Section
+================================== */
+.summary-card-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.summary-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px 28px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: white;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.summary-card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* ================================
+   Utility Classes
+================================== */
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 12px 0;
+}
+
+.compact-padding {
+  padding: 8px 0;
+}
+
+.glass-box input::placeholder,
+.glass-box select::placeholder,
+.glass-box textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.search-input {
+ margin-left: -7px;
+    width: 96%;
+    padding: 10px 11px;
+    border: none;
+        background-color: rgb(255 255 255 / 21%);
+    color: #000000d1;
+}
